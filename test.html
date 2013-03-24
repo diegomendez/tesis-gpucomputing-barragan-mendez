@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+	<title> WebCL First Example </title>
+	<script>
+	function convert()
+	{
+		if (window.WebCL == undefined) 
+		{
+		    alert("Unfortunately your system does not support WebCL. " +
+		          "Make sure that you have both the OpenCL driver " +
+		          "and the WebCL browser extension installed.");
+		    return false;
+	  	}
+	}
+	</script>
+</head>
+<body>
+	<div id="input" style="float:left;">
+	<p> Input Image </p>
+	<canvas id="inputCanvas" width="200" height="300"
+			style="border:1px solid #000000;"
+			img-src="images/image1.png"> 
+	</canvas>
+	<button id="convert" onclick="convert()">Convert!</button>
+	</div>
+	<div id="output" style="float:left;">
+		<p> Output Image </p>
+		<canvas id="outputCanvas" width="200" height="300"
+				style="border:1px solid #000000;">
+		</canvas>
+	</div>
+</body>
